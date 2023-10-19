@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 16:47:14 by dflugel           #+#    #+#             */
-/*   Updated: 2023/10/19 23:52:27 by dflugel          ###   ########.fr       */
+/*   Created: 2023/10/19 23:56:15 by dflugel           #+#    #+#             */
+/*   Updated: 2023/10/20 00:13:56 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <unistd.h>
 
 #include <stdio.h>
 #include <string.h>
 
-int ft_strlen(char *character)
+char ft_memset(char *character, int c, int n)
 {
     int i;
     i = 0;
 
     while (*(character + i) != '\0')
     {
+        if (i == n)
+        {
+            break;
+        }
+        *character = c;
         i++;
     }
     
-    return(i);
+    return *character;
 
 }
 
@@ -34,18 +38,16 @@ int ft_strlen(char *character)
 
 int main()
 {
-    char *d = "done";
-    char *h = "Hallo";
+    char *test = "This is my test";
     
     
-    // yes testen
-    printf("Length of string b = %d \n",ft_strlen("y"));
+    // testen
+    puts(test);
 
-    // done testen
-    printf("Length of string b = %d \n",ft_strlen(d));
+    ft_memset(test, 't', 3);
+    
+    puts(test);
 
-    // Hallo testen
-    printf("Length of string b = %d \n",ft_strlen(h));
 
     return 0;
 }
