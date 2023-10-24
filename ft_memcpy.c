@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:56:15 by dflugel           #+#    #+#             */
-/*   Updated: 2023/10/24 16:27:08 by dflugel          ###   ########.fr       */
+/*   Created: 2023/10/24 16:29:53 by dflugel           #+#    #+#             */
+/*   Updated: 2023/10/24 16:33:06 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <unistd.h>
 
 #include <stdio.h>
 #include <string.h>
 
-void ft_memset(char *character, int c, int n)
+void ft_memcpy(char *dest, char *src, int n)
 {
     int i;
     i = 0;
 
-    while (*(character + i) != '\0')
+    while (*(dest + i) != '\0')
     {
         if (i == n)
         {
             break;
         }
-        *(character + i) = c;
+        *(dest + i) = *(src + i);
         i++;
     }
 
@@ -37,12 +38,13 @@ void ft_memset(char *character, int c, int n)
 int main()
 {
     char test[] = "This is my test";
+    char try[] = "my test this is";
     
     
     // testen
     puts(test);
 
-    ft_memset(test, 't', 3);
+    ft_memcpy(test, try, 7);
 
     puts(test);
 

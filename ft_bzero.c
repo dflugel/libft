@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:56:15 by dflugel           #+#    #+#             */
-/*   Updated: 2023/10/24 16:27:08 by dflugel          ###   ########.fr       */
+/*   Created: 2023/10/24 16:27:18 by dflugel           #+#    #+#             */
+/*   Updated: 2023/10/24 16:28:33 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <unistd.h>
 
 #include <stdio.h>
 #include <string.h>
 
-void ft_memset(char *character, int c, int n)
+void ft_bzero (char *character, int n)
 {
     int i;
     i = 0;
@@ -26,7 +27,7 @@ void ft_memset(char *character, int c, int n)
         {
             break;
         }
-        *(character + i) = c;
+        *(character + i) = '\0';
         i++;
     }
 
@@ -42,7 +43,7 @@ int main()
     // testen
     puts(test);
 
-    ft_memset(test, 't', 3);
+    ft_bzero(test, 3);
 
     puts(test);
 

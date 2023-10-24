@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:56:15 by dflugel           #+#    #+#             */
-/*   Updated: 2023/10/24 16:27:08 by dflugel          ###   ########.fr       */
+/*   Created: 2023/10/24 16:51:30 by dflugel           #+#    #+#             */
+/*   Updated: 2023/10/24 16:55:54 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,31 @@
 #include <stdio.h>
 #include <string.h>
 
-void ft_memset(char *character, int c, int n)
+void ft_memmove(char *dest1, char *src1, int n)
 {
     int i;
     i = 0;
-
-    while (*(character + i) != '\0')
+    char proxy[n];
+    while (*(src1 + i) != '\0')
     {
         if (i == n)
         {
             break;
         }
-        *(character + i) = c;
+        *(proxy + i) = *(src1 + i);
         i++;
     }
 
-
+    i = 0;
+    while (*(dest1 + i) != '\0')
+    {
+        if (i == n)
+        {
+            break;
+        }
+        *(dest1 + i) = *(proxy + i);
+        i++;
+    }
 }
 
 
@@ -42,7 +51,7 @@ int main()
     // testen
     puts(test);
 
-    ft_memset(test, 't', 3);
+    ft_memmove(test, test + 2, 7);
 
     puts(test);
 
