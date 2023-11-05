@@ -1,44 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:53:16 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:14:05 by dflugel          ###   ########.fr       */
+/*   Created: 2023/11/05 03:34:01 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/05 04:42:29 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <unistd.h>
 
 #include <stdio.h>
 #include <string.h>
 
-int ft_toupper(int c)
+size_t ft_strncmp(char *str1, char *str2, size_t n)
 {
-    if (97 <= c && c <= 122)
+    size_t i;
+    i = 0;
+
+    while (*(str1 + i) == *(str2 + i))
     {
-        c -= 32;
+        if (*(str1 + i) != '\0' || *(str2 + i) != '\0' || i == n)
+        {
+            return 0;
+        }
+        i++;
     }
+
+    return (*(str1 + i) - *(str2 + i));
     
-    
-    return(c);
+
+return i;
 
 }
 
 
-
 int main()
 {
- 
-    // testen
-    printf("Test 1 : %c \n", ft_toupper('a'));
-    printf("Test 2 : %c \n", ft_toupper('z'));
-    printf("Test 1 : %c \n", ft_toupper('A'));
-    printf("Test 2 : %c \n", ft_toupper('Z'));
+   char str1[15];
+   char str2[15];
+   int ret;
 
+   strcpy(str1, "Abddef");
+   strcpy(str2, "abaef");
+
+   ret = ft_strncmp(str1, str2, 2);
+
+   printf("%i\n", ret);
+   
+   return(0);
 
     return 0;
 }

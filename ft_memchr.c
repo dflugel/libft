@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:53:16 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:14:05 by dflugel          ###   ########.fr       */
+/*   Created: 2023/11/05 04:18:32 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/05 04:24:56 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <unistd.h>
 
 #include <stdio.h>
 #include <string.h>
 
-int ft_toupper(int c)
+char *ft_memchr(char *str, int c, size_t n)
 {
-    if (97 <= c && c <= 122)
+    size_t i;
+    i = 0;
+
+    while (*(str + i) != '\0' && i <= n)
     {
-        c -= 32;
+        if (*(str + i) == c)
+        {
+            return (str + i);
+        }
+        i++;
     }
-    
-    
-    return(c);
+
+return '\0';
 
 }
 
 
-
 int main()
 {
- 
+    char test[] = "This is my test";
+    
     // testen
-    printf("Test 1 : %c \n", ft_toupper('a'));
-    printf("Test 2 : %c \n", ft_toupper('z'));
-    printf("Test 1 : %c \n", ft_toupper('A'));
-    printf("Test 2 : %c \n", ft_toupper('Z'));
+    puts(test);
 
+    puts(ft_memchr(test, 'm', 7));
 
     return 0;
 }

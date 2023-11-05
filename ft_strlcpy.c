@@ -1,43 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:53:16 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:14:05 by dflugel          ###   ########.fr       */
+/*   Created: 2023/10/26 02:15:47 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/05 01:54:48 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <unistd.h>
 
 #include <stdio.h>
 #include <string.h>
 
-int ft_toupper(int c)
+size_t ft_strlcpy(char *dest, char *src, size_t n)
 {
-    if (97 <= c && c <= 122)
+    size_t i;
+    i = 0;
+
+    while (*(dest + i) != '\0')
     {
-        c -= 32;
+        if (i == n)
+        {
+            *(dest + i) = '\0';
+            break;
+        }
+        *(dest + i) = *(src + i);
+        i++;
     }
-    
-    
-    return(c);
+
+return i;
 
 }
 
 
-
 int main()
 {
- 
+    char test[] = "This is my test";
+    char try[] = "my test this is";
+    char f;
+    
     // testen
-    printf("Test 1 : %c \n", ft_toupper('a'));
-    printf("Test 2 : %c \n", ft_toupper('z'));
-    printf("Test 1 : %c \n", ft_toupper('A'));
-    printf("Test 2 : %c \n", ft_toupper('Z'));
+    puts(test);
+
+    f = ft_strlcpy(test, try, 7) + 48;
+    
+    write(1, &f,1);
+    write(1, "\n",1);
+
+    puts(test);
 
 
     return 0;

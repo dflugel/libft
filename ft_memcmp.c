@@ -1,44 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:53:16 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:14:05 by dflugel          ###   ########.fr       */
+/*   Created: 2023/11/05 04:37:46 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/05 04:44:12 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <unistd.h>
 
 #include <stdio.h>
 #include <string.h>
 
-int ft_toupper(int c)
+int ft_memcmp(char *str1, char *str2, size_t n)
 {
-    if (97 <= c && c <= 122)
+    size_t i;
+    i = 0;
+
+    while (*(str1 + i) == *(str2 + i))
     {
-        c -= 32;
+        if (i == n)
+        {
+            return 0;
+        }
+        i++;
     }
+
+    return (*(str1 + i) - *(str2 + i));
     
-    
-    return(c);
+
+return i;
 
 }
 
 
-
 int main()
 {
- 
-    // testen
-    printf("Test 1 : %c \n", ft_toupper('a'));
-    printf("Test 2 : %c \n", ft_toupper('z'));
-    printf("Test 1 : %c \n", ft_toupper('A'));
-    printf("Test 2 : %c \n", ft_toupper('Z'));
+   char str1[15];
+   char str2[15];
+   int ret;
 
+   memcpy(str1, "abcdef", 6);
+   memcpy(str2, "bBCDEF", 6);
+
+   ret = ft_memcmp(str1, str2, 5);
+
+   printf("%i\n", ret);
+   
+   return(0);
 
     return 0;
 }

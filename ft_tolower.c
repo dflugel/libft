@@ -1,15 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:53:16 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:14:05 by dflugel          ###   ########.fr       */
+/*   Created: 2023/11/05 02:12:56 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/05 02:14:19 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <unistd.h>
 
@@ -18,9 +17,9 @@
 
 int ft_toupper(int c)
 {
-    if (97 <= c && c <= 122)
+    if (65 <= c && c <= 90)
     {
-        c -= 32;
+        c += 32;
     }
     
     
@@ -38,7 +37,6 @@ int main()
     printf("Test 2 : %c \n", ft_toupper('z'));
     printf("Test 1 : %c \n", ft_toupper('A'));
     printf("Test 2 : %c \n", ft_toupper('Z'));
-
 
     return 0;
 }
