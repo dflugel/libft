@@ -6,17 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 05:54:10 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/09 06:24:52 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:17:31 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len);
-
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
     char * substring;
     size_t i;

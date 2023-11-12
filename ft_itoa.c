@@ -1,51 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 23:56:15 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:06:36 by dflugel          ###   ########.fr       */
+/*   Created: 2023/11/11 06:11:34 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/12 13:07:43 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-void    ft_memset(char *character, int c, int n)
+char    *ft_itoa(int n)
 {
-    int i;
-    i = 0;
+    // calloc reversed
+    // malloc str definieren
+    
+    char *str;
+    char *reversed;
+    str = malloc(9);
+    reversed = malloc(9);
 
-    while (*(character + i) != '\0')
+    int i;
+    int j;
+    i = 0;
+    j = 0;
+
+    while (n != 0)
     {
-        if (i == n)
-        {
-            break;
-        }
-        *(character + i) = c;
+        *(reversed + i) = n % 10 + 48;
+        n = n/10;
         i++;
     }
 
+    while (i > 0)
+    {
+        *(str + j) = *(reversed + i - 1);
+        j++;
+        i--;
+    }
+
+    *(str + j) = '\0';
+
+    return(str);
 
 }
 
 
-int main()
+int main () 
 {
-    char test[] = "This is my test";
-    
-    
-    // testen
-    puts(test);
 
-    ft_memset(test, 't', 3);
+   puts(ft_itoa(98990489));
 
-    puts(test);
-
-
-    return 0;
+   return(0);
 }

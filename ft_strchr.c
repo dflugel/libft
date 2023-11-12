@@ -6,16 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 02:57:55 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 04:23:05 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:11:20 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-char *ft_strchr(char *str, int c)
+char    *ft_strchr(char *str, int c)
 {
     size_t i;
     i = 0;

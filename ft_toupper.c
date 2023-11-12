@@ -6,17 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 23:53:16 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:14:05 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:19:31 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-int ft_toupper(int c)
+int     ft_toupper(int c)
 {
     if (97 <= c && c <= 122)
     {

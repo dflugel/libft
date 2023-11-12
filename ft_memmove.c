@@ -6,16 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:51:30 by dflugel           #+#    #+#             */
-/*   Updated: 2023/10/24 16:55:54 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:10:38 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-void ft_memmove(char *dest1, char *src1, int n)
+void    ft_memmove(char *dest1, char *src1, int n)
 {
     int i;
     i = 0;

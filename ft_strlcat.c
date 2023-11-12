@@ -6,16 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 01:21:50 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:05:32 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:13:15 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-size_t ft_strlcat(char *dest, char *src, size_t n)
+size_t  ft_strlcat(char *dest, char *src, size_t n)
 {
     size_t i;
     size_t j;

@@ -1,6 +1,18 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/12 12:53:28 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/12 13:07:17 by dflugel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isascii(int character)
+#include "libft.h"
+
+int     ft_isascii(int character)
 {
     if (character >= 0 && character <= 127)
     {

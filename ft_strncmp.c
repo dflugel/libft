@@ -6,16 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:34:01 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 04:42:29 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:13:50 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-size_t ft_strncmp(char *str1, char *str2, size_t n)
+size_t  ft_strncmp(char *str1, char *str2, size_t n)
 {
     size_t i;
     i = 0;

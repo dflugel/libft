@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 11:14:50 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:29:22 by dflugel          ###   ########.fr       */
+/*   Created: 2023/11/10 11:29:48 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/12 13:16:57 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char    *ft_strtrim(char const *s1, char const *s2)
 {
+    // i für start (testen, wie viele characters passen)
+    // j für Ende (testen, ab wann die characters passen)
+    // j - i allokieren
+    // j bis i einsetzen
+
     char * newstring;
     int i;
     int j;
 
-    newstring = malloc(ft_strlen(s1) + ft_strlen(s2));
     i = 0;
     j = 0;
+
+
+    newstring = malloc(ft_strlen(s1) + ft_strlen(s2));
 
     while (*(s1 + i) != '\0')
     {
@@ -43,6 +50,20 @@ char    *ft_strjoin(char const *s1, char const *s2)
     //return null if alloc fails not implemented yet
 }
 
+int ft_strlen(const char *character)
+{
+    int i;
+    i = 0;
+
+    while (*(character + i) != '\0')
+    {
+        i++;
+    }
+    
+    return(i);
+
+}
+
 int main()
 {
     char test[] = "This is ";
@@ -53,7 +74,7 @@ int main()
     puts(test);
 
 
-    puts(ft_strjoin(test, try));
+    puts(ft_strtrim(test, try));
 
 
     return 0;

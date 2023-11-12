@@ -6,18 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 02:10:04 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/09 05:40:13 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:09:25 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <unistd.h>
 
-void *ft_calloc(size_t nitems, size_t size);
-
-void *ft_calloc(size_t nitems, size_t size)
+void    *ft_calloc(size_t nitems, size_t size)
 {
     int i;
     int n;

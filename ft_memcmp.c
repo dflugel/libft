@@ -6,16 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 04:37:46 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 04:45:52 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:10:26 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-int ft_memcmp(char *str1, char *str2, size_t n)
+int     ft_memcmp(char *str1, char *str2, size_t n)
 {
     size_t i;
     i = 0;

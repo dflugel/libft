@@ -1,6 +1,18 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/12 12:49:54 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/12 13:06:53 by dflugel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha(int character)
+#include "libft.h"
+
+int     ft_isalpha(int character)
 {
     if (character > 64 && character < 91)
     {

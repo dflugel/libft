@@ -1,6 +1,18 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/12 12:53:55 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/12 13:07:15 by dflugel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isprint(int character)
+#include "libft.h"
+
+int     ft_isprint(int character)
 {
     if (character >= 32 && character <= 126)
     {

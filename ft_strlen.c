@@ -6,17 +6,13 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:47:14 by dflugel           #+#    #+#             */
-/*   Updated: 2023/10/19 23:52:27 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:29:21 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <unistd.h>
-
-#include <stdio.h>
-#include <string.h>
-
-int ft_strlen(char *character)
+int ft_strlen(const char *character)
 {
     int i;
     i = 0;
@@ -31,7 +27,7 @@ int ft_strlen(char *character)
 }
 
 
-
+/*
 int main()
 {
     char *d = "done";
@@ -49,3 +45,4 @@ int main()
 
     return 0;
 }
+*/

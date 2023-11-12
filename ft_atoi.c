@@ -6,15 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 04:55:51 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 18:29:51 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:06:40 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int ft_atoi(char *str)
+int     ft_atoi(char *str)
 {
     int nbr;
     nbr = 0;

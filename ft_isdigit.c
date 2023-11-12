@@ -1,6 +1,18 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/12 12:52:03 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/12 13:07:17 by dflugel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isdigit(int character)
+#include "libft.h"
+
+int     ft_isdigit(int character)
 {
     if (character > 47 && character < 58)
     {

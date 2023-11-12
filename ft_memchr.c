@@ -6,16 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 04:18:32 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 04:24:56 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:08:54 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-char *ft_memchr(char *str, int c, size_t n)
+char    *ft_memchr(char *str, int c, size_t n)
 {
     size_t i;
     i = 0;

@@ -6,16 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:13:41 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 03:20:30 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:16:59 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
-
 #include <stdio.h>
 #include <string.h>
 
-char *ft_strchr(char *str, int c)
+char    *ft_strrchr(char *str, int c)
 {
     size_t i;
     i = 1;
@@ -48,7 +48,7 @@ int main()
 
     //printf("Test 1 : %c \n", *ft_strchr(test, 'm'));
 
-    puts(ft_strchr(test, 'm'));
+    puts(ft_strrchr(test, 'm'));
 
     return 0;
 }

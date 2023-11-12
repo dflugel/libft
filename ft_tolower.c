@@ -6,16 +6,15 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 02:12:56 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/05 02:14:19 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:21:51 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-int ft_toupper(int c)
+int     ft_tolower(int c)
 {
     if (65 <= c && c <= 90)
     {
@@ -33,10 +32,10 @@ int main()
 {
  
     // testen
-    printf("Test 1 : %c \n", ft_toupper('a'));
-    printf("Test 2 : %c \n", ft_toupper('z'));
-    printf("Test 1 : %c \n", ft_toupper('A'));
-    printf("Test 2 : %c \n", ft_toupper('Z'));
+    printf("Test 1 : %c \n", ft_tolower('a'));
+    printf("Test 2 : %c \n", ft_tolower('z'));
+    printf("Test 1 : %c \n", ft_tolower('A'));
+    printf("Test 2 : %c \n", ft_tolower('Z'));
 
     return 0;
 }

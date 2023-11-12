@@ -1,6 +1,18 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/12 12:53:12 by dflugel           #+#    #+#             */
+/*   Updated: 2023/11/12 13:06:48 by dflugel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalnum(int character)
+#include "libft.h"
+
+int     ft_isalnum(int character)
 {
     if (character > 64 && character < 91)
     {

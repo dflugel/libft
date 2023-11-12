@@ -6,17 +6,16 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 05:40:37 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/09 05:52:17 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/12 13:11:48 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-char *ft_strdup(const char *str);
-
-char *ft_strdup(const char *str)
+char    *ft_strdup(const char *str)
 {
     char * duplicate;
     int i;
