@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:14:50 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:29:22 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/14 13:15:04 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ char    *ft_strjoin(char const *s1, char const *s2)
     int i;
     int j;
 
+    if (!s1 || !s2)
+    {
+        return (0);
+    }
     newstring = malloc(ft_strlen(s1) + ft_strlen(s2));
     i = 0;
     j = 0;
@@ -39,8 +43,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
 
     *(newstring + i + j) = '\0';
 
-    return newstring;
-    //return null if alloc fails not implemented yet
+    return (newstring);
 }
 
 int main()

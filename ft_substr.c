@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 05:54:10 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:17:31 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/14 13:11:43 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     char * substring;
     size_t i;
     i = 0;
+    if (!s)
+    {
+        return (0);
+    }
 
     substring = malloc(len);
 
@@ -35,8 +39,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 
     *(substring + i) = '\0';
 
-    return substring;
-    //return null if alloc fails not implemented yet
+    return (substring);
 }
 
 int main()
@@ -51,5 +54,5 @@ int main()
     puts(ft_substr(test, 3, 7));
 
 
-    return 0;
+    return (0);
 }
