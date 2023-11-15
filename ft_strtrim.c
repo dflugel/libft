@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:29:48 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:16:57 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/15 21:22:50 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ char    *ft_strtrim(char const *s1, char const *s2)
     i = 0;
     j = 0;
 
-
+    if(!s1)
+    {
+        return (0);
+    }
     newstring = malloc(ft_strlen(s1) + ft_strlen(s2));
 
     while (*(s1 + i) != '\0')
@@ -46,11 +49,10 @@ char    *ft_strtrim(char const *s1, char const *s2)
 
     *(newstring + i + j) = '\0';
 
-    return newstring;
-    //return null if alloc fails not implemented yet
+    return (newstring);
 }
 
-int ft_strlen(const char *character)
+int     ft_strlen(const char *character)
 {
     int i;
     i = 0;
@@ -64,17 +66,77 @@ int ft_strlen(const char *character)
 
 }
 
+// char    *strrev(char const *srcstr)
+// {
+//     char *str;
+//     char *reversed;
+//     str = malloc(9);
+//     reversed = malloc(9);
+
+//     int i;
+//     int j;
+//     i = 0;
+//     j = 0;
+
+//     while (n != 0)
+//     {
+//         *(reversed + i) = n % 10 + 48;
+//         n = n/10;
+//         i++;
+//     }
+
+//     while (i > 0)
+//     {
+//         *(str + j) = *(reversed + i - 1);
+//         j++;
+//         i--;
+//     }
+
+//     *(str + j) = '\0';
+
+//     return(str);
+// }
+
+
+int     trimlen(char const *srcstr, char const *trimset)
+{
+    char *newstring;
+    int i;
+    int j;
+    int stoptrigger;
+
+    i = 0;
+    stoptrigger = 1;
+    while (*(srcstr + i) != '\0' && stoptrigger == 1)
+    {
+        stoptrigger = 0;
+        j = 0;
+        while (*(trimset + j) != '\0')
+        {
+            if (*(trimset + j) == *(srcstr + i))
+            {
+                stoptrigger = 1;
+                break;
+            }
+            j++;
+        }
+        i++;
+    }
+    i--;
+    return (i);
+}
+
 int main()
 {
-    char test[] = "This is ";
-    char try[] = "my test";
+    char const test[] = ", .This is .,";
+    char const try[] = ". ,";
 
     
     // testen
     puts(test);
 
 
-    puts(ft_strtrim(test, try));
+    printf("Die Länge ist: %i\n",/*ft_str*/trimlen(test, try));
 
 
     return 0;
