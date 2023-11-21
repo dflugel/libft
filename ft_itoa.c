@@ -10,45 +10,48 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+int     intlen(int n);
+
 char    *ft_itoa(int n)
 {
-    // calloc reversed
-    // malloc str definieren
-    
     char *str;
-    char *reversed;
-    str = malloc(9);
-    reversed = malloc(9);
-
     int i;
-    int j;
-    i = 0;
-    j = 0;
 
-    while (n != 0)
+    if(!n)
     {
-        *(reversed + i) = n % 10 + 48;
-        n = n/10;
-        i++;
+        return (NULL);
     }
-
-    while (i > 0)
+    i = intlen(n);
+    str = malloc(i);
+    *(str + i) = '\0';
+    i--;
+    while (i >= 0)
     {
-        *(str + j) = *(reversed + i - 1);
-        j++;
+        *(str + i) = n % 10 + 48;
+        n = n/10;
         i--;
     }
-
-    *(str + j) = '\0';
-
     return(str);
 
 }
 
+int     intlen(int n)
+{
+    int     i;
+
+    i = 0;
+    while (n != 0)
+    {
+        n = n/10;
+        i++;
+    }
+    return i;
+}
 
 int main () 
 {

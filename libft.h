@@ -24,7 +24,7 @@ int     ft_isascii(int character);
 
 int     ft_isprint(int character);
 
-int     ft_strlen(const char *character);
+int     ft_strlen(char const *character);
 
 void    ft_memset(char *character, int c, int n);
 
@@ -65,3 +65,5 @@ char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 
 char    *ft_strtrim(char const *s1, char const *s2);
+
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
