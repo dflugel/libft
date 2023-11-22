@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 01:21:50 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:13:15 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:11:48 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ size_t  ft_strlcat(char *dest, char *src, size_t n)
         j++;
     }
 
-return i;
+return (i);
 
 }
 

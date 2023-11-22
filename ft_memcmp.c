@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 04:37:46 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:10:26 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:11:20 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int     ft_memcmp(char *str1, char *str2, size_t n)
     {
         if (i == n)
         {
-            return 0;
+            return (0);
         }
         i++;
     }
@@ -32,7 +32,7 @@ int     ft_memcmp(char *str1, char *str2, size_t n)
     return (*(str1 + i) - *(str2 + i));
     
 
-return i;
+return (i);
 
 }
 

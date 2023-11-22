@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:34:01 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:13:50 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:11:57 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t  ft_strncmp(char *str1, char *str2, size_t n)
     {
         if (*(str1 + i) != '\0' || *(str2 + i) != '\0' || i == n)
         {
-            return 0;
+            return (0);
         }
         i++;
     }
@@ -32,7 +32,7 @@ size_t  ft_strncmp(char *str1, char *str2, size_t n)
     return (*(str1 + i) - *(str2 + i));
     
 
-return i;
+return (i);
 
 }
 

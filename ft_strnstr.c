@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 04:55:57 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:17:00 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:12:01 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char    *ft_strnstr(char *haystack, char *needle, size_t len)
     {
         if (i == len)
         {
-            return 0;
+            return (0);
         }
         while (*(haystack + i + j) == *(needle + j))
         {
@@ -39,7 +39,7 @@ char    *ft_strnstr(char *haystack, char *needle, size_t len)
         j = 0;
         i++;
     }
-return 0;
+return (0);
 
 }
 

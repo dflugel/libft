@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 02:10:04 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:09:25 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:11:06 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void    *ft_calloc(size_t nitems, size_t size)
         i++;
     }
 
-    return place;
+    return (place);
 }
 
 

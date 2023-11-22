@@ -6,7 +6,7 @@
 /*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 05:40:37 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/12 13:11:48 by dflugel          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:11:40 by dflugel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char    *ft_strdup(const char *str)
 
     *(duplicate + i) = '\0';
 
-    return duplicate;
+    return (duplicate);
 }
 
 
