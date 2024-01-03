@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: danielflugel <danielflugel@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 04:18:32 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/22 13:11:18 by dflugel          ###   ########.fr       */
+/*   Updated: 2024/01/03 11:46:23 by danielfluge      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char    *ft_memchr(char *str, int c, size_t n)
         i++;
     }
 
-return (0);
+return (NULL);
 
 }
 

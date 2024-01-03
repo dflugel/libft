@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: danielflugel <danielflugel@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:51:30 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/22 13:11:24 by dflugel          ###   ########.fr       */
+/*   Updated: 2024/01/03 13:40:47 by danielfluge      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,25 @@ void    ft_memmove(char *dest1, char *src1, int n)
         *(dest1 + i) = *(proxy + i);
         i++;
     }
+    if (*(src1 + n - 1) == '\0')
+    {
+        *(dest1 + i - 1) = '\0';
+    }
 }
 
 
-int main()
+/* int main()
 {
     char test[] = "This is my test";
-    
+    char try[] = "So isses.";
     
     // testen
     puts(test);
 
-    ft_memmove(test, test + 2, 7);
+    ft_memmove(test, try, 9);
 
     puts(test);
 
 
     return 0;
-}
+} */

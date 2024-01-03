@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dflugel <dflugel@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: danielflugel <danielflugel@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:29:53 by dflugel           #+#    #+#             */
-/*   Updated: 2023/11/22 13:11:22 by dflugel          ###   ########.fr       */
+/*   Updated: 2024/01/03 13:18:26 by danielfluge      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,19 @@ void    ft_memcpy(char *dest, char *src, int n)
         *(dest + i) = *(src + i);
         i++;
     }
-
-
 }
 
 
 int     main()
 {
     char test[] = "This is my test";
-    char try[] = "my test this is";
+    char try[] = "Dings";
     
     
     // testen
     puts(test);
 
-    ft_memcpy(test, try, 7);
+    ft_memcpy(test, try, ft_strlen(try));
 
     puts(test);
 
